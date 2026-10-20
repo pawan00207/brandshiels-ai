@@ -1,0 +1,6 @@
+{
+  "name": "BrandShield AI",
+  "description": "Intelligent brand-governance platform auditing content before publication against approved brand guidelines, approved facts, and terminology with evidence-grounded findings and human review.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

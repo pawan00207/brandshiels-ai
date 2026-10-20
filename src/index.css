@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", Menlo, Consolas, monospace;
+    --color-gold: #B8975A;
+    --color-gold-hover: #A07F43;
+    --color-gold-subtle: #F6F1E7;
+    --color-ink: #0E0E10;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(184, 151, 90, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 151, 90, 0.45);
+}
+
+/* Accessibility gold focus rings */
+:focus-visible {
+  outline: 2px solid #B8975A !important;
+  outline-offset: 2px !important;
+}
+
+/* Print Styles for Certificate & Audit Reports */
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: auto;
+  }
+
+  body {
+    background: white !important;
+    color: #1a1a1a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, drawers, and buttons */
+  .no-print,
+  nav,
+  header,
+  footer,
+  aside,
+  button:not(.print-include) {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Unconstrain modals so they flow across printed pages */
+  .fixed {
+    position: static !important;
+    overflow: visible !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  .max-w-4xl,
+  .max-w-2xl {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .max-h-\[92vh\],
+  .max-h-\[90vh\] {
+    max-height: none !important;
+  }
+
+  .page-break,
+  .page-break-before {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
