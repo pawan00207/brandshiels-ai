@@ -139,7 +139,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ currentUser, onUserCha
             <div className="relative flex items-center lg:col-span-5">
               <div className="overflow-hidden rounded border border-stone-200 shadow-xl dark:border-stone-800 w-full h-full min-h-[380px] relative">
                 <img
-                  src="/src/assets/images/hero_luxury_editorial_1792505458735.jpg"
+                  src="/images/hero_luxury_editorial_1792505458735.jpg"
                   alt="Maison Aurelia luxury brand governance atelier"
                   className="h-full w-full object-cover"
                   referrerPolicy="no-referrer"
